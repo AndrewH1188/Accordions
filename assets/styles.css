@@ -27,4 +27,58 @@
 }
 .accordion-item h2 {
   font-size: clamp(12px, 4vw, 24px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.96);
+}
+.accordion-item p {
+  font-size: clamp(10px, 2vw, 14px);
+  color: rgba(255, 255, 255, 0.66);
+}
+.accordion-item:active {
+  width: 60%;
+  opacity: 1;
+}
+.accordion-item:active .content {
+  opacity: 1;
+  visibility: visible;
+}
+.accordion-item span {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  font-size: 28px;
+}
+.accordion-item .content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 60px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px 30px 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: 0.25s;
+}
+.accordion-item img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 100%;
+  width: 70vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(0.6);
 }/*# sourceMappingURL=styles.css.map */

@@ -25,6 +25,57 @@
         }
         h2 {
             font-size: clamp(12px, 4vw, 24px);
+            font-weight: 400;
+            color: rgb(255 255 255 / 96%);
+        }
+        p { font-size: clamp(10px, 2vw, 14px);
+            color: rgb(255 255 255 / 66%);
+        }
+        &:active { 
+            width: 60%;
+            opacity: 1;
+            .content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        span { 
+            display: grid;
+            place-items: center;
+            width: 44px;
+            min-width: 44px;
+            height: 44px;
+            color: rgb(0 0 0 / 80%);
+            background-color: rgb(255 255 255 / 70%);
+            border-radius: 50%;
+            font-size: 28px;
+        }
+        .content { 
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            border-radius: 60px;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            padding: 20px 30px 20px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background-color: linear-gradient( 90deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 25%));
+            backdrop-filter: blur(10px);
+            transition: 0.25s
+        }
+        img { 
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 100%;
+            width: 70vw;
+            object-fit: cover;
+            filter: grayscale(0.6);
         }
     }
 }
